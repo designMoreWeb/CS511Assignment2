@@ -21,9 +21,12 @@ public class Exercise {
 	}
 	/**
 	Generate Random Exercise given the max number of plates passed
-	
-	public Exercise generateRandom(Map<WeightPlateSize,Integer ){
-		this.duration = randomGenerator.nextInt(20); 	
+	Sample ApparatusType: LEGPRESSMACHINE,  BARBELL, HACKSQUATMACHINE , LEGEXTENSIONMACHINE **/
+	public Exercise generateRandom(Map<WeightPlateSize,Integer> weight ){
+		ApparatusType AT = ApparatusType.randomApparatustype();
+		int rand_duration = randomGenerator.nextInt(20); 	
+		Exercise random_exercise = new Exercise(AT,weight,rand_duration);
+		return random_exercise;
 	}
-	*/ 
+ 
 }
